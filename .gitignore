@@ -1,0 +1,5 @@
+CMakePresets.json
+.clangd
+out
+.vscode
+.vs

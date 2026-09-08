@@ -1,0 +1,304 @@
+{
+    "meshes": [
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 10,
+                "y": 1,
+                "z": 10
+            },
+            "position": {
+                "x": 0.0,
+                "y": -10.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/lamp.obj",
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "position": {
+                "x": 0.0,
+                "y": -9.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/lamp.png",
+                "normal": "assets/normal_none.png",
+                "specular": "assets/none.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 2,
+                "y": 0.2,
+                "z": 2
+            },
+            "position": {
+                "x": 0.0,
+                "y": -9.5,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 1.5,
+                "y": 0.2,
+                "z": 1.5
+            },
+            "position": {
+                "x": 5.0,
+                "y": -9.0,
+                "z": 1.5
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 1.5,
+                "y": 0.2,
+                "z": 1.5
+            },
+            "position": {
+                "x": 9.0,
+                "y": -8.5,
+                "z": -2.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 2,
+                "y": 0.2,
+                "z": 2
+            },
+            "position": {
+                "x": 14.0,
+                "y": -7.5,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 2.5,
+                "y": 0.2,
+                "z": 2.5
+            },
+            "position": {
+                "x": 20.0,
+                "y": -6.5,
+                "z": 2.5
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 2,
+                "y": 0.2,
+                "z": 2
+            },
+            "position": {
+                "x": 27.0,
+                "y": -5.0,
+                "z": -1.5
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        },
+        {
+            "mesh": "assets/round_cube.obj",
+            "scale": {
+                "x": 3,
+                "y": 0.2,
+                "z": 3
+            },
+            "position": {
+                "x": 35.0,
+                "y": -3.0,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collidable": true,
+            "type": "NORMAL",
+            "material": {
+                "albedo": "assets/paved_albedo.png",
+                "normal": "assets/paved_normal.png",
+                "specular": "assets/full.png",
+                "name": "basic"
+            },
+            "behavior": {
+                "damage": 0
+            }
+        }
+    ],
+    "spawn": {
+        "position": {
+            "x": 0.0,
+            "y": -8.9,
+            "z": 0.0
+        }
+    },
+    "lights": [
+        {
+            "position": {
+                "x": 0.0,
+                "y": 10.0,
+                "z": 0.0
+            },
+            "color": {
+                "x": 1.0,
+                "y": 0.71,
+                "z": 0.39
+            },
+            "radius": 75,
+            "intensity": 5,
+            "type": "POINT"
+        },
+        {
+            "position": {
+                "x": 35.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "color": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+            },
+            "radius": 15,
+            "intensity": 10,
+            "type": "POINT"
+        }
+    ]
+}
