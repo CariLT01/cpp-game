@@ -16,3 +16,14 @@ definitely not power path trust
 - "clean" codebase? not really
 
 *mostly* coded without AI
+
+# build
+
+```
+mkdir build
+cd build
+cmake ..
+
+
+cmake --build . --config Release
+```
