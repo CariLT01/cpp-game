@@ -23,6 +23,7 @@ class LevelLoader;
 class PhysicsEngine;
 class CollidersRegistry;
 class TextRenderer;
+class ShardsManager;
 
 class Engine {
 public:
@@ -56,6 +57,7 @@ private:
     std::unique_ptr<PhysicsEngine> physicsEngine;
     std::unique_ptr<CollidersRegistry> collidersRegistry;
     std::unique_ptr<TextRenderer> textRenderer;
+    std::unique_ptr<ShardsManager> shardsManager;
 
 	bool running = false;
 

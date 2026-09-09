@@ -14,6 +14,9 @@ public:
 	void update();
 	void render(bool applyMaterial = true);
 
+    void setPosition(const glm::vec3& position);
+    void setRotation(const glm::vec3& rotation);
+
 	Material* getMaterial() const { return material; }
 
 private:

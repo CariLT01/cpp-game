@@ -240,7 +240,7 @@ void LightManager::runLightingPass() {
     glUniform1i(gNormalLoc, 1);
     glUniform1i(gAlbedoLoc, 2);
 
-    for (auto &light : lights) {
+    for (const auto &[id, light] : lights) {
 
         glm::mat4 modelMatrix = glm::mat4(1.0f);
         modelMatrix = glm::translate(modelMatrix, light.position);
@@ -275,8 +275,18 @@ void LightManager::runLightingPass() {
     glCullFace(GL_BACK);
 }
 
-void LightManager::addLight(const Light& light) {
-    lights.push_back(light);
+unsigned int LightManager::addLight(const Light& light) {
+
+
+
+    lights[lightCounter + 1] = light;
     logger->debug(std::format("Add light: {} {} {} {}", light.intensity, light.position.x, light.position.y, light.position.z));
     logger->debug(std::format("Light data: {} {} {} {}", light.color.r, light.color.g, light.color.b, light.size));
+    lightCounter++;
+
+    return lightCounter;
+}
+
+void LightManager::removeLight(unsigned int lightId) {
+    lights.erase(lightId);
 }

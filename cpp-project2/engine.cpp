@@ -16,6 +16,7 @@
 #include "level_loader.hpp"
 #include "physics_engine.hpp"
 #include "text_renderer.hpp"
+#include "shards_manager.hpp"
 #include <format>
 #include <glad/gl.h>
 
@@ -102,7 +103,8 @@ void Engine::initialize() {
     lightManager = std::make_unique<LightManager>(framebuffer.get(), camera.get(), 800, 600);
     collidersRegistry = std::make_unique<CollidersRegistry>();    
     textRenderer = std::make_unique<TextRenderer>(assetLoader.get(), 800, 600);
-    
+    shardsManager = std::make_unique<ShardsManager>(scene.get(), assetLoader.get(), lightManager.get());
+
     textRenderer->createText("C++ Game showcase", 0, 0, 2.0f);
 
     // lightManager->addLight(Light{.position = glm::vec3(0.0f), .size = 5.0f});
@@ -133,6 +135,10 @@ void Engine::initialize() {
     for (auto& collider : data.colliders) {
         collidersRegistry->addColider(collider);
         physicsEngine->addColider(collider);
+    }
+
+    for (auto& shard : data.shards) {
+        shardsManager->addShard(shard);
     }
 
     playerController->setPosition(data.spawnPosition);
@@ -199,6 +205,7 @@ void Engine::tick() {
     playerController->update();
     physicsEngine->update();
     camera->update();
+    shardsManager->update(1.0f / 60.0f);
 }
 
 void Engine::run() {

@@ -12,10 +12,14 @@ public:
 	~Scene();
 
 	void addObject(WorldObject* worldObject);
+    void removeObject(WorldObject* worldObject);
 
 	void render(Camera* camera);
 
 private:
+
+    bool worldObjectExists(WorldObject* worldObject);
+
 	std::vector<std::unique_ptr<WorldObject>> worldObjects;
 
     std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt("scene");

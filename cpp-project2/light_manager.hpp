@@ -29,7 +29,8 @@ public:
 
     void runLightingPass();
 
-    void addLight(const Light& light);
+    unsigned int addLight(const Light& light);
+    void removeLight(unsigned int lightId);
 
     unsigned int getLightTexture() { return lightTexture->getTexture(); }
 
@@ -42,6 +43,7 @@ private:
     std::unique_ptr<ShaderProgram> program;
 
     unsigned int fbo;
+    unsigned int lightCounter;
     // unsigned int lightTexture;
     std::unique_ptr<Texture> lightTexture;
 
@@ -52,7 +54,7 @@ private:
     int width;
     int height;
 
-    std::vector<Light> lights;
+    std::unordered_map<unsigned int, Light> lights;
 
     std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt("light_manager");
 };

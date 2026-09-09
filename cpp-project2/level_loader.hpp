@@ -21,6 +21,7 @@ struct LevelData {
     std::vector<WorldObject*> worldObjects;
     std::vector<Light> lights;
     std::vector<Collider*> colliders;
+    std::vector<glm::vec3> shards;
 
     glm::vec3 spawnPosition;
 };

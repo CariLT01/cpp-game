@@ -49,8 +49,14 @@ void PlayerController::updateMovement() {
     }
 
     glm::vec3 moveVector = glm::vec3(0.0f);
-    moveVector += camera->getFront() * front;
-    moveVector += camera->getRight() * right;
+
+    glm::vec2 moveFront = glm::vec2(cos(glm::radians(camera->getYaw())), sin(glm::radians(camera->getYaw())));
+    glm::vec2 moveRight = glm::vec2(cos(glm::radians(camera->getYaw() + 90)), sin(glm::radians(camera->getYaw() + 90)));
+
+
+
+    moveVector += front * glm::vec3(moveFront.x, 0, moveFront.y);
+    moveVector += right* glm::vec3(moveRight.x, 0, moveRight.y);
 
     /* logger->debug(
         std::format("{} {} {}", moveVector.x, moveVector.y, moveVector.z)); */

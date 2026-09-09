@@ -300,5 +300,12 @@
             "intensity": 10,
             "type": "POINT"
         }
-    ]
+    ],
+    "shards": [{
+        "position": {
+            "x": 35,
+            "y": -1.0,
+            "z": 0.0
+        }
+    }]
 }

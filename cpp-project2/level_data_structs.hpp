@@ -72,11 +72,18 @@ struct Light {
                                    type);
 };
 
+struct Shard {
+    Vec3 position;
+
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Shard, position);
+};
+
 struct Level {
     std::vector<Mesh> meshes;
     Spawn spawn;
     std::vector<Light> lights;
+    std::vector<Shard> shards;
 
-    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Level, meshes, spawn, lights);
+    NLOHMANN_DEFINE_TYPE_INTRUSIVE(Level, meshes, spawn, lights, shards);
 };
 } // namespace level_data

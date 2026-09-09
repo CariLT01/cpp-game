@@ -148,12 +148,19 @@ LevelData LevelLoader::loadLevel(const std::string &filename) {
         });
     }
 
+    std::vector<glm::vec3> shards;
+
+    for (const level_data::Shard &shard : levelData.shards) {
+        shards.push_back(glm::vec3(shard.position.x, shard.position.y, shard.position.z));
+    }
+
     return {
         .meshes = meshesVec,
         .materials = materialsVec,
         .worldObjects = worldObjects,
         .lights = lights,
         .colliders = colliders,
+        .shards = shards,
         .spawnPosition =
             glm::vec3(levelData.spawn.position.x, levelData.spawn.position.y,
                       levelData.spawn.position.z),
