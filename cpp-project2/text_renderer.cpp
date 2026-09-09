@@ -39,6 +39,15 @@ Text* TextRenderer::createText(const std::string& text, int x, int y, float font
 
 }
 
+void TextRenderer::deleteText(Text* text) {
+    for (auto it = textObjects.begin(); it != textObjects.end(); ++it) {
+        if (it->get() == text) {
+            textObjects.erase(it);
+            return;
+        }
+    }
+}
+
 void TextRenderer::loadShaders() {
     textShader = std::make_unique<ShaderProgram>();
     textShader->addShader(GL_VERTEX_SHADER, readFile("shaders/text_rendering_vertex.glsl"));

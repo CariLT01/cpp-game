@@ -108,7 +108,9 @@ add_executable (cpp-project2 "cpp-project2.cpp" "cpp-project2.h" "window.cpp" "e
   text_renderer.cpp
   text_mesh.cpp
   shards_manager.hpp
-  shards_manager.cpp)
+  shards_manager.cpp
+  player_stats.hpp
+  player_stats.cpp)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET cpp-project2 PROPERTY CXX_STANDARD 20)

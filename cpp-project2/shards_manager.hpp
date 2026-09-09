@@ -1,6 +1,8 @@
+#include "spdlog/sinks/stdout_color_sinks.h"
 #include <memory>
 #include <glm/glm.hpp>
-#include <vector>
+#include <unordered_map>
+#include <spdlog/spdlog.h>
 
 
 
@@ -10,6 +12,8 @@ class Mesh;
 class Material;
 class AssetLoader;
 class LightManager;
+class PlayerController;
+class PlayerStats;
 
 struct Shard {
     glm::vec3 position;
@@ -20,10 +24,12 @@ struct Shard {
 
 class ShardsManager {
 public:
-    ShardsManager(Scene* scene, AssetLoader* assetLoader, LightManager* lightManger);
+    ShardsManager(Scene* scene, AssetLoader* assetLoader, LightManager* lightManger, PlayerController* playerController, PlayerStats* playerStats);
     ~ShardsManager();
 
-    void addShard(const glm::vec3& position);
+    unsigned int addShard(const glm::vec3& position);
+    void removeShard(unsigned int shardId);
+
     void update(float dt);
 
 private:
@@ -33,11 +39,17 @@ private:
     Scene* scene;
     AssetLoader* assetLoader;
 
-    std::vector<std::unique_ptr<Shard>> shards;
+    std::unordered_map<unsigned int, std::unique_ptr<Shard>> shards;
     std::unique_ptr<Mesh> shardMesh;
     std::unique_ptr<Material> shardMaterial;
 
     LightManager* lightManager;
+    PlayerController* playerController;
+    PlayerStats* playerStats;
 
     int frame = 0;
+    unsigned int shardCounter;
+
+
+    std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt("shards_manager");
 };

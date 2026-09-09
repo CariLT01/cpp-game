@@ -24,6 +24,7 @@ class PhysicsEngine;
 class CollidersRegistry;
 class TextRenderer;
 class ShardsManager;
+class PlayerStats;
 
 class Engine {
 public:
@@ -58,6 +59,7 @@ private:
     std::unique_ptr<CollidersRegistry> collidersRegistry;
     std::unique_ptr<TextRenderer> textRenderer;
     std::unique_ptr<ShardsManager> shardsManager;
+    std::unique_ptr<PlayerStats> playerStats;
 
 	bool running = false;
 

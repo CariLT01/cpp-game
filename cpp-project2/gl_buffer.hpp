@@ -13,5 +13,5 @@ public:
 private:
     unsigned int buffer;
 
-    std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt(std::format("gl_buffer_{}", (void*)this));
+    // std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt(std::format("gl_buffer_{}", (void*)this));
 };

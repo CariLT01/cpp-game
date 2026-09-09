@@ -15,6 +15,7 @@ public:
 
     void update();
     void setPosition(const glm::vec3& position);
+    glm::vec3 getPosition();
 
 private:
 

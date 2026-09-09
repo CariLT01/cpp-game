@@ -35,6 +35,7 @@ public:
     ~TextRenderer();
 
     Text* createText(const std::string& name, int x, int y, float fontSize);
+    void deleteText(Text* text);
 
     void render();
 

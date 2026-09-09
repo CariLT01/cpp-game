@@ -90,3 +90,7 @@ void PlayerController::update() {
 void PlayerController::setPosition(const glm::vec3& position) {
     virtualCharacter->setPosition(position);
 }
+
+glm::vec3 PlayerController::getPosition() {
+    return virtualCharacter->getPosition();
+}

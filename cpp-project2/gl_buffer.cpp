@@ -8,6 +8,6 @@ GlBuffer::GlBuffer() {
 GlBuffer::~GlBuffer() {
     glDeleteBuffers(1, &buffer);
     
-    logger->debug("GL buffer deleted");
+    // logger->debug("GL buffer deleted");
 }
 
